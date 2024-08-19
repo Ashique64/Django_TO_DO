@@ -27,29 +27,11 @@
                 <div class="col-md-6 item2">
                     <div class="to_do_form">
                         <h2>To-Do App</h2>
-                        <form method="POST" action="{% url 'add' %}">
+                        <form method="POST" action="{% url 'edit' todo.id %}">
                             {% csrf_token %}
-                            <input class="form-control" type="text" name="title" placeholder="New To-Do" required />
+                            <input class="form-control" type="text" name="title" value="{{ todo.title }}" placeholder="New To-Do" required />
                             <button type="submit" class="btn"><i class="fas fa-check"></i></button>
                         </form>
-                        <hr />
-                        <ul>
-                            {% for i in todos %}
-                            <li>
-                                {{i.title}}
-                                <span>
-                                    <a href="{% url "edit" i.id %}" class="text-success me-3 icons">
-                                        <i class="bi bi-pencil"></i>
-                                    </a>
-                                    <a href="{% url "delete" i.id %}" class="text-danger icons">
-                                        <i class="bi bi-trash"></i>
-                                    </a>
-                                </span>
-                            </li>
-                            {% empty %}
-                                <li>No to-do's yet!</li>
-                            {% endfor %}
-                        </ul>
                     </div>
                 </div>
             </div>

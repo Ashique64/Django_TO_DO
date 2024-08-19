@@ -9,8 +9,6 @@ body {
     min-height: 100vh;
     padding: 40px;
     font-family: "New Amsterdam", sans-serif;
-    /* color: #f3d873; */
-    /* color: #fb4d4c; */
 }
 
 .item1 {
@@ -38,7 +36,6 @@ body {
     padding: 20px;
     border: 2.5px solid #fb4d4c;
     border-radius: 10px;
-    /* background-color: #f3d873; */
 }
 
 .to_do_form > h2 {
@@ -56,6 +53,11 @@ body {
     background-color: #f3d873;
     color: #fb4d4c;
     width: 13%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
+    padding-top: 2px;
 }
 
 .to_do_form > form > button:hover {
@@ -73,6 +75,7 @@ body {
 
 .to_do_form > ul > li {
     background-color: #f3d873;
+    color: #fb4d4c;
     margin: 8px 0px;
     list-style: none;
     padding: 10px;
